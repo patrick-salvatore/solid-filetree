@@ -1,0 +1,58 @@
+$sft-namespace: "Filetree";
+
+.#{$sft-namespace}__tree-root {
+  user-select: none;
+  line-height: 1.75;
+  z-index: 1;
+
+  .#{$sft-namespace}__folder-root {
+    position: relative;
+    margin-left: 20px;
+
+    .#{$sft-namespace}__folder-name {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+
+      .#{$sft-namespace}__folder-name-text {
+        margin-left: 10px;
+      }
+
+      &:hover {
+      }
+    }
+
+    .#{$sft-namespace}__folder-collapse {
+      height: max-content;
+      max-height: 0;
+      will-change: max-height;
+      overflow: hidden;
+      transition: 0.3s ease-in-out;
+
+      &.open {
+        max-height: 800px;
+      }
+
+      .#{$sft-namespace}__folder-contents {
+        // border-left: 3px solid #dbdbdd;
+      }
+    }
+  }
+
+  .#{$sft-namespace}__file-root {
+    box-sizing: content-box;
+    margin-left: 20px;
+
+    .#{$sft-namespace}__file-name {
+      display: flex;
+      align-items: center;
+
+      .#{$sft-namespace}__file-name-text {
+        margin-left: 10px;
+      }
+
+      &:hover {
+      }
+    }
+  }
+}
